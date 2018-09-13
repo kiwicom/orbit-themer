@@ -11,7 +11,7 @@
   "author": "Tomáš Hapl",
   "license": "MIT",
   "dependencies": {
-    "@kiwicom/orbit-components": "git://github.com/kiwicom/orbit-components.git#modal",
+    "@kiwicom/orbit-components": "^0.10.0",
     "@kiwicom/orbit-design-tokens": "^0.1.4",
     "copy-to-clipboard": "^3.0.8",
     "ramda": "^0.25.0",

@@ -7,15 +7,9 @@ import Button from "./Button"
 import ButtonLink from "./ButtonLink"
 import Checkbox from "./Checkbox"
 import InputField from "./InputField"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Card from "@kiwicom/orbit-components/lib/Card"
 import CardHeader from "@kiwicom/orbit-components/lib/Card/CardHeader"
 import CardContent from "@kiwicom/orbit-components/lib/Card/CardContent"
-import Separator from "@kiwicom/orbit-components/lib/Separator"
-import Portal from "@kiwicom/orbit-components/es/Portal"
-import Modal from "@kiwicom/orbit-components/lib/Modal"
-import ModalHeader from "@kiwicom/orbit-components/lib/Modal/ModalHeader"
-import ModalSection from "@kiwicom/orbit-components/lib/Modal/ModalSection"
 
 const StyledComponentsOuter = styled.div`
   background: #F5F7F9;
