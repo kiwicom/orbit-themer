@@ -1,0 +1,39 @@
+{
+  "name": "orbit-themer",
+  "version": "0.0.1",
+  "description": "Design your own orbit-components theme with custom colors",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "flow": "flow check",
+    "build": "webpack --mode production"
+  },
+  "author": "Tomáš Hapl",
+  "license": "MIT",
+  "dependencies": {
+    "@kiwicom/orbit-components": "git://github.com/kiwicom/orbit-components.git#modal",
+    "@kiwicom/orbit-design-tokens": "^0.1.4",
+    "copy-to-clipboard": "^3.0.8",
+    "ramda": "^0.25.0",
+    "react": "^16.4.2",
+    "react-color": "^2.14.1",
+    "styled-components": "^3.4.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "flow-bin": "^0.74.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "react-dom": "^16.4.2",
+    "react-hot-loader": "^4.3.5",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
+  }
+}
