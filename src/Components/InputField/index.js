@@ -17,7 +17,7 @@ const StyledInputFields = styled.div`
  }
 `
 
-const InputFields = () => {
+const InputFields = ({ theme }) => {
 
   const label = "Your label";
   const placeholder = "Placeholder";
@@ -25,12 +25,12 @@ const InputFields = () => {
 
   return (
     <StyledInputFields>
-      <InputField label={label} placeholder={placeholder} />
-      <InputField label={label} value={value} prefix="$" required />
-      <InputField label={label} value={value} inlineLabel />
-      <InputField label={label} value={value} disabled />
-      <InputField label={label} value={value} help="Help text" />
-      <InputField label={label} value={value} error="Error text" />
+      <InputField label={label} placeholder={placeholder} theme={theme} />
+      <InputField label={label} value={value} prefix="$" required theme={theme} />
+      <InputField label={label} value={value} inlineLabel theme={theme} />
+      <InputField label={label} value={value} disabled theme={theme} />
+      <InputField label={label} value={value} help="Help text" theme={theme} />
+      <InputField label={label} value={value} error="Error text" theme={theme} />
     </StyledInputFields>
   )
 

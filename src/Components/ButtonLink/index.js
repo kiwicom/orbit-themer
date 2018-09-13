@@ -10,14 +10,14 @@ const StyledButtons = styled.div`
  }
 `
 
-const ButtonLinks = () => {
+const ButtonLinks = ({ theme }) => {
 
   const message = "Your label"
 
   return (
     <StyledButtons>
-      <ButtonLink type="primary">{message}</ButtonLink>
-      <ButtonLink type="secondary">{message}</ButtonLink>
+      <ButtonLink type="primary" theme={theme}>{message}</ButtonLink>
+      <ButtonLink type="secondary" theme={theme}>{message}</ButtonLink>
     </StyledButtons>
   )
 

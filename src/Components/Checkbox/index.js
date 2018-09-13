@@ -11,17 +11,17 @@ const StyledCheckboxes = styled.div`
  }
 `
 
-const Checkboxes = () => {
+const Checkboxes = ({ theme }) => {
 
   const label = "Your label"
   const info = "Additional information for this choice"
 
   return (
     <StyledCheckboxes>
-      <Checkbox label={label} info={info} />
-      <Checkbox label={label} info={info} checked />
-      <Checkbox label={label} info={info} disabled />
-      <Checkbox label={label} info={info} hasError />
+      <Checkbox label={label} info={info} theme={theme} />
+      <Checkbox label={label} info={info} checked theme={theme} />
+      <Checkbox label={label} info={info} disabled theme={theme} />
+      <Checkbox label={label} info={info} hasError theme={theme} />
     </StyledCheckboxes>
   )
 
