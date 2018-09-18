@@ -585,9 +585,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@kiwicom/orbit-components@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.10.0.tgz#6514f1c61a12a56e53fe2d8ffe0d29f3f6fe7b12"
+"@kiwicom/orbit-components@^0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.11.1.tgz#1329fc806a806785961914cdd1790a71b8fcac8b"
   dependencies:
     "@kiwicom/orbit-design-tokens" "^0.1.4"
     react-icon-base "^2.1.2"
