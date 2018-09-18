@@ -45,13 +45,13 @@ const Components = ({ theme }) => (
       <Card>
         <CardHeader title="Buttons"/>
         <CardContent>
-          <Button theme={theme} />
+          <Button />
         </CardContent>
       </Card>
       <Card>
         <CardHeader title="ButtonLinks"/>
         <CardContent>
-          <ButtonLink theme={theme} />
+          <ButtonLink />
         </CardContent>
       </Card>
       <Card>

@@ -11,6 +11,7 @@ const StyledInputFields = styled.div`
  label {
   z-index: 1;
   flex: 0 25%;
+  align-self: flex-end;
   padding: 0 8px;
   margin-top: 16px;
   box-sizing: border-box;
