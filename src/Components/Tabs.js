@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { diff } from "deep-object-diff"
 
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Button from "@kiwicom/orbit-components/lib/Button"
@@ -7,6 +8,7 @@ import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
 import ChevronDown from "@kiwicom/orbit-components/lib/icons/ChevronDown"
 import {SketchPicker} from "react-color";
 import copy from "copy-to-clipboard"
+import {DEFAULT_COLORS} from "../consts"
 
 const StyledTabs = styled.div`
   padding: 36px 24px;
@@ -149,9 +151,7 @@ class Color extends React.Component {
   }
 
   handleChange = (color) => {
-
     const {onChangeColor, objectKey} = this.props
-
     onChangeColor(objectKey, color.hex);
   }
 
@@ -186,7 +186,9 @@ class Tabs extends React.Component {
 
   copyToClipboard = () => {
     const { colors } = this.props
-    copy(JSON.stringify(colors, null, "\t"));
+    const onlyDifferentColors = diff(DEFAULT_COLORS, colors);
+
+    copy(JSON.stringify(onlyDifferentColors, null, "\t"));
     this.setState({
       copied: true,
     })
