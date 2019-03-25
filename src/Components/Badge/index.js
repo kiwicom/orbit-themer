@@ -12,16 +12,16 @@ const StyledBadges = styled.div`
  
 `
 
-const Badges = ({ theme }) => {
+const Badges = () => {
   const message = "Badge"
   return (
     <StyledBadges>
-      <Badge type="default" theme={theme}>{message}</Badge>
-      <Badge type="dark" theme={theme}>{message}</Badge>
-      <Badge type="info" theme={theme}>{message}</Badge>
-      <Badge type="success" theme={theme}>{message}</Badge>
-      <Badge type="warning" theme={theme}>{message}</Badge>
-      <Badge type="critical" theme={theme}>{message}</Badge>
+      <Badge type="default">{message}</Badge>
+      <Badge type="dark">{message}</Badge>
+      <Badge type="info">{message}</Badge>
+      <Badge type="success">{message}</Badge>
+      <Badge type="warning">{message}</Badge>
+      <Badge type="critical">{message}</Badge>
     </StyledBadges>
   )
 

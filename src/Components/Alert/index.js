@@ -1,3 +1,4 @@
+// @flow
 import React from "react"
 import styled from "styled-components"
 import Alert from "@kiwicom/orbit-components/lib/Alert"
@@ -14,23 +15,23 @@ const StyledAlerts = styled.div`
   }
 `
 
-const Alerts = ({ theme }) => {
+const Alerts = () => {
 
   const message = "Type longer explanation of your message here...";
 
   return (
     <StyledAlerts>
       <div>
-        <Alert type="info" title="Alert" theme={theme}>{message}</Alert>
+        <Alert type="info" title="Test">{message}</Alert>
       </div>
       <div>
-        <Alert type="success" title="Alert" theme={theme}>{message}</Alert>
+        <Alert type="success" title="Test">{message}</Alert>
       </div>
       <div>
-        <Alert type="warning" title="Alert" theme={theme}>{message}</Alert>
+        <Alert type="warning" title="Test">{message}</Alert>
       </div>
       <div>
-        <Alert type="critical" title="Alert" theme={theme}>{message}</Alert>
+        <Alert type="critical" title="Alert">{message}</Alert>
       </div>
     </StyledAlerts>
 )}

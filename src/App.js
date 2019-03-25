@@ -2,26 +2,29 @@ import React from "react"
 import ReactDOM from "react-dom"
 import assocPath from "ramda/src/assocPath"
 import { hot } from "react-hot-loader"
-import styled, { ThemeProvider } from "styled-components"
-import { getTokens } from "@kiwicom/orbit-design-tokens"
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+import { getTokens } from "@kiwicom/orbit-components"
 import Components from "./Components"
 import Tabs from "./Components/Tabs"
-import { injectGlobal } from 'styled-components';
 import { DEFAULT_COLORS } from "./consts"
+import hash from "object-hash"
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   html {
     height: 100%;
     width: 100%;
+    min-height: 100%;
   }
   body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    height: 100%;
   }
-`
+`;
 
 const StyledApp = styled.div`
+  min-height: 100%;
   display: flex;
 `
 
@@ -42,13 +45,16 @@ class App extends React.Component {
 
   render() {
 
-    const tokens = getTokens(this.state.colors)
+    const customTokens = getTokens({
+      palette: this.state.colors
+    })
 
     return (
       <StyledApp>
+        <GlobalStyle/>
         <Tabs colors={this.state.colors} onChangeColor={this.onChangeColor} />
-        <ThemeProvider theme={{orbit: tokens}}>
-          <Components theme={{ orbit: tokens}}/>
+        <ThemeProvider theme={{orbit: customTokens}}>
+          <Components />
         </ThemeProvider>
       </StyledApp>
     )

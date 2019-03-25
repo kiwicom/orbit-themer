@@ -188,7 +188,12 @@ class Tabs extends React.Component {
     const { colors } = this.props
     const onlyDifferentColors = diff(DEFAULT_COLORS, colors);
 
-    copy(JSON.stringify(onlyDifferentColors, null, "\t"));
+    copy(JSON.stringify({
+      palette: onlyDifferentColors
+    }, null, "\t"));
+
+
+
     this.setState({
       copied: true,
     })

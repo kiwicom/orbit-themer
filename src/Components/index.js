@@ -9,12 +9,13 @@ import Checkbox from "./Checkbox"
 import InputField from "./InputField"
 import Card from "@kiwicom/orbit-components/lib/Card"
 import CardHeader from "@kiwicom/orbit-components/lib/Card/CardHeader"
-import CardContent from "@kiwicom/orbit-components/lib/Card/CardContent"
+import CardSection from "@kiwicom/orbit-components/lib/Card/CardSection"
 
 const StyledComponentsOuter = styled.div`
   background: #F5F7F9;
   padding: 0 32px;
   max-height: 100vh;
+  flex: 1 auto;
   overflow-y: scroll;
 `
 
@@ -27,44 +28,44 @@ const StyledComponentsInner = styled.div`
   }
 `
 
-const Components = ({ theme }) => (
+const Components = () => (
   <StyledComponentsOuter>
     <StyledComponentsInner>
       <Card>
           <CardHeader title="Alerts" />
-          <CardContent>
-              <Alert theme={theme} />
-          </CardContent>
+          <CardSection>
+              <Alert />
+          </CardSection>
       </Card>
       <Card>
           <CardHeader title="Badges"/>
-          <CardContent>
-            <Badge theme={theme} />
-          </CardContent>
+          <CardSection>
+            <Badge />
+          </CardSection>
       </Card>
       <Card>
         <CardHeader title="Buttons"/>
-        <CardContent>
+        <CardSection>
           <Button />
-        </CardContent>
+        </CardSection>
       </Card>
       <Card>
         <CardHeader title="ButtonLinks"/>
-        <CardContent>
+        <CardSection>
           <ButtonLink />
-        </CardContent>
+        </CardSection>
       </Card>
       <Card>
         <CardHeader title="Checkboxes"/>
-        <CardContent>
-          <Checkbox theme={theme} />
-        </CardContent>
+        <CardSection>
+          <Checkbox />
+        </CardSection>
       </Card>
       <Card>
         <CardHeader title="InputFields"/>
-        <CardContent>
-          <InputField theme={theme} />
-        </CardContent>
+        <CardSection>
+          <InputField />
+        </CardSection>
       </Card>
     </StyledComponentsInner>
   </StyledComponentsOuter>
