@@ -1,0 +1,10 @@
+stages:
+  - build
+
+include:
+  - 'https://ci-files.skypicker.com/templates/build/docker_build.yml'
+
+docker_build:
+  before_script:
+    - yarn build
+  allow_failure: yes
