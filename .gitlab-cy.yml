@@ -1,8 +1,27 @@
 stages:
+  - prepare
   - build
 
 include:
   - 'https://ci-files.skypicker.com/templates/build/docker_build.yml'
 
+build-client:
+  image: node:10-alpine
+  stage: prepare
+  tags: [high-performance]
+  script:
+    - yarn
+    - yarn build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-all
+    paths:
+      - node_modules/
+    policy: pull
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist/
+
 docker_build:
+  dependencies: [build-client]
   allow_failure: yes
