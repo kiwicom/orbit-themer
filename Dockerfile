@@ -1,4 +1,6 @@
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
-COPY ./dist ./
+RUN yarn build
+
+COPY ./dist .
