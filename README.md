@@ -1,3 +1,3 @@
 # orbit-themer
 
-Live: http://orbit-themer.psvz.cz/
+Live: http://themer.orbit.kiwi/
