@@ -1,14 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import { diff } from "deep-object-diff"
+import path from "ramda/src/path"
 
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Button from "@kiwicom/orbit-components/lib/Button"
 import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
 import ChevronDown from "@kiwicom/orbit-components/lib/icons/ChevronDown"
+import Badge from "@kiwicom/orbit-components/lib/Badge"
+
+
 import {SketchPicker} from "react-color";
 import copy from "copy-to-clipboard"
-import {DEFAULT_COLORS} from "../consts"
+import { DEFAULT_COLORS } from "../consts"
 
 const StyledTabs = styled.div`
   padding: 36px 24px;
@@ -156,12 +160,19 @@ class Color extends React.Component {
   }
 
   render() {
-    const {name, extra, color} = this.props
-    const {openedColorPicker} = this.state
+    const {name, extra, color, objectKey } = this.props
+    const { openedColorPicker } = this.state
+
+    const defaultColor = path(objectKey.split("."), DEFAULT_COLORS)
+
 
     return (
       <StyledColor>
-        <StyledColorName>{name} <StyledColorNameHover>{extra && `:${extra}`}</StyledColorNameHover></StyledColorName>
+        <StyledColorName>
+          {name}
+          <StyledColorNameHover>{extra && `:${extra}`}</StyledColorNameHover>
+          {color !== defaultColor && <Badge size="small">!</Badge>}
+        </StyledColorName>
         <StyledChoosedColor onClick={this.handleClick}>
           <div style={{background: color}}/>
         </StyledChoosedColor>
